@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fb3Pv2fnrugQ2zfZZMztBe9r4cO9v7nuV8bc3TW+owfZPA9WBHZDFZuqUVPKUuGk5RJodXP/U7JDx6rzVyyDvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pasha\\source\\repos\\GraffitiChanger\\GraffitiChanger\\GraffitiChanger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pasha\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Pasha\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
