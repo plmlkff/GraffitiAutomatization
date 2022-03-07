@@ -5,13 +5,14 @@ using System.IO;
 using System.Text;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows;
+using System.Runtime.InteropServices;
 
 namespace GraffitiChanger
 {
     class ExcelLogic
     {
         static int lastColumn = 0;
-        static int lastRow = 0;
+        public static int lastRow = 0;
         public static string[][] data = new string[20][];
         public static void _getIpAndPassList()
         {
@@ -31,14 +32,16 @@ namespace GraffitiChanger
                         data[i][j] = (worksheet.Cells[i + 1, j + 1] as Excel.Range).Value2?.ToString();
                     }
                 }
-                workbook.Close();
+                workbook.Close(false);
+                workbook = null;
                 application.Quit();
+                application = null;
                 GC.Collect();
             }
             else
             {
                 MessageBox.Show("There is no database with information about servers. Check the current directory and restart the program", "Error");
-                App.labelOutput("There is no database with information about servers. Check current directory");
+                Terminal.labelOutput("There is no database with information about servers. Check current directory");
                 throw new Exception();
             }
         }
@@ -50,13 +53,39 @@ namespace GraffitiChanger
             var lastCell = worksheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
             lastColumn = lastCell.Column;
             lastRow = lastCell.Row;
-            for (int i = 0; i < lastRow; i++)
+            try
             {
-                worksheet.Cells[i + 1, 3] = data[i][2];
+                for (int i = 0; i < lastRow; i++)
+                {
+                    worksheet.Cells[i + 1, 3] = data[i][2];
+                }
             }
-            workbook.Save();
-            workbook.Close();
+            catch (Exception)
+            {
+
+                workbook.Close();
+                workbook = null;
+                application.Quit();
+                application = null;
+                GC.Collect();
+            }
+            workbook.Close(true);
+            workbook = null;
             application.Quit();
+            application = null;
+            GC.Collect();
+        }
+        private static void NAR(object o)
+        {
+            try
+            {
+                Marshal.FinalReleaseComObject(o);
+            }
+            catch { }
+            finally
+            {
+                o = null;
+            }
         }
     }
 }

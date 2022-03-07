@@ -1,0 +1,56 @@
+11:17:49:    Log file created, everything is ready to go
+11:17:49:    Process started
+11:19:50:    Graffiti verification process started
+11:22:45:    Process started
+11:24:45:    Graffiti verification process started
+11:29:47:    Process started
+11:33:08:    ##Program launched##
+11:33:13:    Process started
+11:34:13:    Graffiti verification process started
+11:34:51:    ##Program launched##
+11:35:34:    Process started
+11:36:34:    Graffiti verification process started
+11:44:01:    ##Program launched##
+11:44:08:    Process started
+11:45:24:    ##Program launched##
+11:45:25:    Process started
+11:46:26:    Graffiti verification process started
+11:47:36:    Server connection error: 623
+11:47:36:    Server connection error: 45732
+11:47:36:    Server connection error: 5243
+11:47:36:    Server connection error: 236
+11:47:36:    Server connection error: 55
+11:48:03:    IP: 185.105.91.234  redirected form KOLA to ALBERTICH
+11:48:03:    Redirect process from KOLA to ALBERTICH completed
+11:49:03:    Graffiti verification process started
+11:56:12:    ##Program launched##
+11:56:17:    Process started
+11:56:30:    ##Program launched##
+11:56:30:    Process started
+11:57:31:    Graffiti verification process started
+11:59:03:    Graffiti verification process started
+12:02:01:    ##Program launched##
+12:02:02:    Process started
+12:10:54:    ##Program launched##
+12:13:05:    ##Program launched##
+12:13:06:    Process started
+12:14:06:    Graffiti verification process started
+12:15:33:    ##Program launched##
+12:15:34:    Process started
+12:15:45:    ##Program launched##
+12:15:47:    Process started
+12:15:57:    Graffiti verification process started
+12:17:51:    Server connection error: 123
+12:17:51:    Server connection error: 2345
+12:17:51:    Server connection error: 124
+12:17:51:    Server connection error: 623
+12:17:51:    Server connection error: 45732
+12:17:51:    Server connection error: 5243
+12:17:51:    Server connection error: 236
+12:17:51:    Server connection error: 5687
+12:17:51:    Server connection error: 55
+12:17:51:    Server connection error: 6768
+12:18:18:    IP: 185.105.91.234  redirected form ALBERTICH to KOLA
+12:18:18:    Redirect process from ALBERTICH to KOLA completed
+12:18:28:    Graffiti verification process started
+12:19:12:    Process stopped

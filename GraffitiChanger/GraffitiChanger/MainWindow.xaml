@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GraffitiChanger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize" Loaded="MainWindow_Loaded" WindowStyle="SingleBorderWindow">
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="414" Stroke="Black" VerticalAlignment="Center" Width="780"/>
-        <Label x:Name="console" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Height="414" Width="780" FontSize="30"/>
-
+        <Grid x:Name="FrontEnd">
+            <Rectangle Height="410" Fill="LightYellow"   HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Margin="0,40,0,0"/>
+            <Rectangle HorizontalAlignment="Center" Height="319" Stroke="Black" VerticalAlignment="Center" Width="760" Grid.ColumnSpan="4" Margin="0,0,0,0"/>
+        </Grid>
+        <Grid x:Name="control_Elements">
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True" Height="310" Width="730" HorizontalAlignment="Center" Margin="0,0,10,0">
+                <TextBlock x:Name="label_Terminal" Text="" FontSize="14" TextWrapping="Wrap" />
+            </ScrollViewer>
+            <Button x:Name="start_Button" Click="start_Button_Click" Content ="Start" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="30" Width="100" Margin="0,0,20,10" FontSize="20"/>
+            <Button x:Name="stop_Button" Click="stop_Button_Click" Content ="Stop" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="30" Width="100" Margin="20,0,0,10" FontSize="20"/>
+            <Label x:Name="label_Time" Content ="1234" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" Width="auto" FontSize="20"/>
+        </Grid>
     </Grid>
 </Window>
